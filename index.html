@@ -33,21 +33,100 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Leading Manufacturer of Plastic Packaging Solutions</h2>
-                <p>Specializing in Blister Packaging, PVC Trays, and Disposable Containers</p>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-text">5.0 (2 Reviews)</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="products.html" class="btn btn-primary">View Products</a>
-                    <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+    <!-- Hero Slideshow Section -->
+    <section class="hero-slideshow">
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=800&fit=crop" alt="Plastic packaging manufacturing">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h2>Leading Manufacturer of Plastic Packaging Solutions</h2>
+                        <p>Specializing in Blister Packaging, PVC Trays, and Disposable Containers</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (2 Reviews)</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary">View Products</a>
+                            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=800&fit=crop" alt="Industrial packaging production">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h2>Quality Packaging Solutions Since 2020</h2>
+                        <p>Trusted by businesses across India for superior packaging products</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (2 Reviews)</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary">View Products</a>
+                            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&h=800&fit=crop" alt="Modern manufacturing facility">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h2>Advanced Manufacturing Infrastructure</h2>
+                        <p>State-of-the-art facility delivering excellence in every product</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (2 Reviews)</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary">View Products</a>
+                            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&h=800&fit=crop" alt="Packaging products">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h2>Customized Packaging for Every Industry</h2>
+                        <p>From automotive to pharmaceuticals - we've got you covered</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (2 Reviews)</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary">View Products</a>
+                            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="slide-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slide-nav next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="currentSlide(0)"></span>
+            <span class="indicator" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
         </div>
     </section>
 

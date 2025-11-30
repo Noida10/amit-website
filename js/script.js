@@ -1,3 +1,72 @@
+// Banner Slideshow Functionality
+let currentSlideIndex = 0;
+let slideInterval;
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+
+// Function to show specific slide
+function showSlide(index) {
+    // Ensure index is within bounds
+    if (index >= totalSlides) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = totalSlides - 1;
+    } else {
+        currentSlideIndex = index;
+    }
+
+    // Remove active class from all slides and indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+
+    // Add active class to current slide and indicator
+    slides[currentSlideIndex].classList.add('active');
+    indicators[currentSlideIndex].classList.add('active');
+}
+
+// Function to change slide (for arrow buttons)
+function changeSlide(direction) {
+    showSlide(currentSlideIndex + direction);
+    resetSlideInterval();
+}
+
+// Function to go to specific slide (for indicators)
+function currentSlide(index) {
+    showSlide(index);
+    resetSlideInterval();
+}
+
+// Auto-advance slides
+function autoSlide() {
+    currentSlideIndex++;
+    showSlide(currentSlideIndex);
+}
+
+// Reset interval when user manually changes slide
+function resetSlideInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
+}
+
+// Initialize slideshow
+if (slides.length > 0) {
+    showSlide(0);
+    slideInterval = setInterval(autoSlide, 5000);
+
+    // Pause slideshow on hover
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener('mouseenter', function() {
+            clearInterval(slideInterval);
+        });
+
+        slideshowContainer.addEventListener('mouseleave', function() {
+            slideInterval = setInterval(autoSlide, 5000);
+        });
+    }
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
