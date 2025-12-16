@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Trade Linkers - Get in Touch for Packaging Solutions">
-    <title>Contact Us - Trade Linkers</title>
+    <meta name="description" content="Contact Quickinn - Get in touch with our team for demos, support, or partnership inquiries.">
+    <title>Contact Us - Quickinn Cloud PMS</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -13,17 +16,24 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>Trade Linkers</h1>
-                    <p class="tagline">Quality Packaging Solutions</p>
+                    <a href="index.html">
+                        <span class="logo-icon">Q</span>
+                        <span class="logo-text">Quickinn</span>
+                    </a>
                 </div>
                 <nav class="nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html" class="active">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="header-actions">
+                    <a href="contact.html" class="btn btn-outline">Login</a>
+                    <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+                </div>
                 <div class="mobile-menu-toggle">
                     <span></span>
                     <span></span>
@@ -33,11 +43,14 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with us for your packaging requirements</p>
+            <div class="page-hero-content">
+                <span class="section-badge">Contact</span>
+                <h1>Get in Touch</h1>
+                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
         </div>
     </section>
 
@@ -47,13 +60,19 @@
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
-                    <h2>Have a Requirement?</h2>
-                    <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and our team will get back to you within 24 hours.</p>
 
                     <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -62,115 +81,174 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Hotel/Company Name *</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rooms">Number of Rooms</label>
+                                <select id="rooms" name="rooms">
+                                    <option value="">Select range</option>
+                                    <option value="1-10">1-10 rooms</option>
+                                    <option value="11-25">11-25 rooms</option>
+                                    <option value="26-50">26-50 rooms</option>
+                                    <option value="51-100">51-100 rooms</option>
+                                    <option value="100+">100+ rooms</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="product">Product Interest</label>
-                            <select id="product" name="product">
-                                <option value="">Select a product</option>
-                                <option value="hardware-blister">Hardware Blister</option>
-                                <option value="medicine-blister">Medicine Blister Packing</option>
-                                <option value="piston-ring">Piston and Ring Blister Packing</option>
-                                <option value="pvc-box">PVC Plastic Injection Box</option>
-                                <option value="auto-part-tray">PVC Auto Part Tray</option>
-                                <option value="packaging-tray">Blister Injection Packaging Tray</option>
-                                <option value="disposable">Disposable Containers/Trays/Plates</option>
+                            <label for="inquiry">Inquiry Type</label>
+                            <select id="inquiry" name="inquiry">
+                                <option value="">Select inquiry type</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="trial">Start Free Trial</option>
+                                <option value="pricing">Pricing Information</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership Inquiry</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your property and how we can help..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
                     </form>
                 </div>
 
                 <!-- Contact Info -->
                 <div class="contact-info">
-                    <h2>Get in Touch</h2>
+                    <h2>Other Ways to Reach Us</h2>
 
                     <div class="info-card">
-                        <div class="info-icon">📍</div>
+                        <div class="info-icon">&#128231;</div>
                         <div class="info-content">
-                            <h3>Address</h3>
-                            <p>F-26, First Floor, Trade Linkers<br>
-                            Udyog Kunj, UPSIDC Industrial Area<br>
-                            OP wave city NH-9 Ghaziabad<br>
-                            Dasna-201302<br>
-                            Uttar Pradesh, India</p>
+                            <h3>Email Us</h3>
+                            <p>General Inquiries<br>
+                            <a href="mailto:hello@quickinn.com">hello@quickinn.com</a></p>
+                            <p>Sales<br>
+                            <a href="mailto:sales@quickinn.com">sales@quickinn.com</a></p>
+                            <p>Support<br>
+                            <a href="mailto:support@quickinn.com">support@quickinn.com</a></p>
                         </div>
                     </div>
 
                     <div class="info-card">
-                        <div class="info-icon">👨‍💼</div>
+                        <div class="info-icon">&#128222;</div>
                         <div class="info-content">
-                            <h3>Contact Person</h3>
-                            <p><strong>Mr. Shivam Chauhan</strong><br>
-                            Owner</p>
+                            <h3>Call Us</h3>
+                            <p>Sales: +1 (800) 123-4567<br>
+                            Support: +1 (800) 123-4568</p>
+                            <p class="info-note">Available 24/7 for Enterprise customers</p>
                         </div>
                     </div>
 
                     <div class="info-card">
-                        <div class="info-icon">🆔</div>
+                        <div class="info-icon">&#128172;</div>
                         <div class="info-content">
-                            <h3>GST Number</h3>
-                            <p>09BNTPC0194G1ZT</p>
+                            <h3>Live Chat</h3>
+                            <p>Chat with our team in real-time. Available Monday-Friday, 9 AM - 6 PM EST.</p>
+                            <a href="#" class="btn btn-outline btn-sm">Start Chat</a>
                         </div>
                     </div>
 
                     <div class="info-card">
-                        <div class="info-icon">📅</div>
+                        <div class="info-icon">&#128205;</div>
                         <div class="info-content">
-                            <h3>GST Registration Date</h3>
-                            <p>21-07-2020</p>
+                            <h3>Office Location</h3>
+                            <p>Quickinn Technologies Pvt. Ltd.<br>
+                            123 Tech Park, Sector 62<br>
+                            Noida, UP 201301<br>
+                            India</p>
                         </div>
                     </div>
 
-                    <div class="info-card">
-                        <div class="info-icon">⏰</div>
-                        <div class="info-content">
-                            <h3>Business Hours</h3>
-                            <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>
-                            Sunday: Closed</p>
+                    <div class="response-time">
+                        <div class="response-icon">&#9201;</div>
+                        <div>
+                            <strong>Average Response Time</strong>
+                            <p>We typically respond within 2-4 hours during business hours.</p>
                         </div>
-                    </div>
-
-                    <div class="rating">
-                        <div class="stars">★★★★★</div>
-                        <p>5.0 (2 Reviews)</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
+    <!-- Schedule Demo Section -->
+    <section class="demo-section">
         <div class="container">
-            <h2 class="section-title">Find Us</h2>
-            <div class="map-placeholder">
-                <p>📍 Dasna, Ghaziabad, Uttar Pradesh - 201302</p>
-                <p>UPSIDC Industrial Area OP wave city NH-9</p>
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2>Schedule a Live Demo</h2>
+                    <p>See Quickinn in action with a personalized demo from our product specialists. We'll show you how Quickinn can transform your property management.</p>
+                    <ul class="demo-benefits">
+                        <li>&#10003; 30-minute personalized walkthrough</li>
+                        <li>&#10003; Q&A session with product experts</li>
+                        <li>&#10003; Custom setup recommendations</li>
+                        <li>&#10003; No commitment required</li>
+                    </ul>
+                </div>
+                <div class="demo-cta">
+                    <div class="demo-card">
+                        <h3>Book Your Demo</h3>
+                        <p>Choose a time that works for you</p>
+                        <a href="#" class="btn btn-primary btn-lg">Schedule Now</a>
+                        <p class="demo-note">Free, no credit card required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does onboarding take?</h3>
+                    <p>Most properties are up and running within 24-48 hours. Our team provides full support throughout the setup process.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I import my existing data?</h3>
+                    <p>Yes! We support data migration from most popular PMS systems. Our team will assist you with the import process.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer training?</h3>
+                    <p>Absolutely. All plans include free onboarding training. We also provide ongoing training resources and webinars.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What integrations are available?</h3>
+                    <p>Quickinn integrates with 100+ booking channels, payment gateways, and hospitality tools. Check our integrations page for the full list.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta-section">
         <div class="container">
-            <h2>Looking for Quality Packaging Solutions?</h2>
-            <p>We offer reasonable rates and timely delivery</p>
-            <a href="products.html" class="btn btn-primary">View Our Products</a>
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Start your free 14-day trial today. No credit card required.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-white btn-lg">Start Free Trial</a>
+                    <a href="pricing.html" class="btn btn-outline-white btn-lg">View Pricing</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -178,44 +256,57 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Trade Linkers</h3>
-                    <p>Leading manufacturer of plastic packaging solutions since 2020</p>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span>5.0 (2 Reviews)</span>
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">Q</span>
+                        <span class="logo-text">Quickinn</span>
+                    </div>
+                    <p>The modern cloud PMS for hotels, resorts, and vacation rentals. Streamline operations and delight guests.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">FB</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">LI</a>
+                        <a href="#" class="social-link">IG</a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h4>Product</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="features.html">Integrations</a></li>
+                        <li><a href="features.html">Channel Manager</a></li>
+                        <li><a href="features.html">Booking Engine</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Our Products</h4>
+                <div class="footer-links">
+                    <h4>Support</h4>
                     <ul>
-                        <li><a href="products.html">Hardware Blister</a></li>
-                        <li><a href="products.html">Medicine Blister Packing</a></li>
-                        <li><a href="products.html">PVC Auto Part Tray</a></li>
-                        <li><a href="products.html">Disposable Containers</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">System Status</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
                     </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <p><strong>Address:</strong><br>
-                    F-26, First Floor, Udyog Kunj<br>
-                    UPSIDC Industrial Area OP wave city<br>
-                    NH-9 Ghaziabad, Dasna-201302<br>
-                    Uttar Pradesh, India</p>
-                    <p><strong>GST:</strong> 09BNTPC0194G1ZT</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Trade Linkers. All rights reserved.</p>
+                <p>&copy; 2024 Quickinn. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
