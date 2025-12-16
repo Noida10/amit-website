@@ -8,14 +8,15 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
+    --primary-color: #96b8d5;
+    --primary-dark: #7a9fc4;
+    --primary-light: #b5cfe5;
     --secondary-color: #10b981;
-    --accent-color: #f59e0b;
-    --dark-color: #0f172a;
-    --gray-900: #1e293b;
-    --gray-800: #334155;
+    --accent-color: #96b8d5;
+    --dark-color: #091c3e;
+    --brand-dark: #091c3e;
+    --gray-900: #091c3e;
+    --gray-800: #1a2d4d;
     --gray-700: #475569;
     --gray-600: #64748b;
     --gray-500: #94a3b8;
@@ -24,8 +25,6 @@
     --gray-200: #f1f5f9;
     --gray-100: #f8fafc;
     --white: #ffffff;
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-hero: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
@@ -86,7 +85,7 @@ a {
 .logo-icon {
     width: 40px;
     height: 40px;
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     border-radius: var(--radius);
     display: flex;
@@ -265,7 +264,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    background: radial-gradient(ellipse at top, rgba(150, 184, 213, 0.15) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -286,8 +285,8 @@ a {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary-color);
+    background: rgba(150, 184, 213, 0.2);
+    color: var(--dark-color);
     border-radius: 100px;
     font-size: 0.875rem;
     font-weight: 500;
@@ -308,10 +307,7 @@ a {
 }
 
 .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-color);
 }
 
 .hero-subtitle {
@@ -452,15 +448,16 @@ a {
 }
 
 .dash-card.blue {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: var(--dark-color);
 }
 
 .dash-card.green {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: var(--primary-color);
+    color: var(--dark-color);
 }
 
 .dash-card.purple {
-    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    background: var(--gray-800);
 }
 
 .card-label {
@@ -491,7 +488,7 @@ a {
 
 .chart-bars .bar {
     flex: 1;
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    background: var(--primary-color);
     border-radius: 4px 4px 0 0;
     min-height: 10px;
 }
@@ -560,8 +557,8 @@ section {
 .section-badge {
     display: inline-block;
     padding: 0.375rem 0.875rem;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary-color);
+    background: rgba(150, 184, 213, 0.2);
+    color: var(--dark-color);
     border-radius: 100px;
     font-size: 0.8125rem;
     font-weight: 600;
@@ -685,7 +682,7 @@ section {
 .step-number {
     width: 48px;
     height: 48px;
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -875,7 +872,7 @@ section {
 .author-avatar {
     width: 48px;
     height: 48px;
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -932,7 +929,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-    background: var(--gradient-hero);
+    background: var(--dark-color);
     color: var(--white);
     text-align: center;
 }
@@ -1074,7 +1071,7 @@ section {
 
 /* Page Hero */
 .page-hero {
-    background: var(--gradient-hero);
+    background: var(--dark-color);
     color: var(--white);
     padding: 5rem 0;
     text-align: center;
@@ -1312,7 +1309,7 @@ section {
 .guest-avatar {
     width: 48px;
     height: 48px;
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -1367,7 +1364,7 @@ section {
 .profile-avatar {
     width: 56px;
     height: 56px;
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -1424,8 +1421,8 @@ section {
 
 .pref-tag {
     padding: 0.375rem 0.75rem;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary-color);
+    background: rgba(150, 184, 213, 0.2);
+    color: var(--dark-color);
     border-radius: 100px;
     font-size: 0.8125rem;
     font-weight: 500;
@@ -1844,7 +1841,7 @@ section {
 }
 
 .stat-card {
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     padding: 2rem;
     border-radius: var(--radius-lg);
@@ -1955,7 +1952,7 @@ section {
 .team-avatar {
     width: 80px;
     height: 80px;
-    background: var(--gradient-primary);
+    background: var(--dark-color);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -2108,7 +2105,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(150, 184, 213, 0.2);
 }
 
 .contact-info {
@@ -2172,9 +2169,9 @@ section {
     align-items: center;
     gap: 1rem;
     padding: 1.25rem;
-    background: rgba(99, 102, 241, 0.05);
+    background: rgba(150, 184, 213, 0.1);
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(150, 184, 213, 0.2);
 }
 
 .response-icon {
