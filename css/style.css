@@ -96,6 +96,17 @@ a {
     font-size: 1.25rem;
 }
 
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo {
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
