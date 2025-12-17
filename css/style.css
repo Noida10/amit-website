@@ -558,7 +558,6 @@ section {
     display: inline-block;
     padding: 0.375rem 0.875rem;
     background: rgba(150, 184, 213, 0.2);
-    color: var(--dark-color);
     border-radius: 100px;
     font-size: 0.8125rem;
     font-weight: 600;
