@@ -602,7 +602,7 @@ section {
     background: var(--white);
     padding: 2rem;
     border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-200);
+    border: 1px solid #bfc0c1;
     transition: all 0.3s ease;
 }
 
